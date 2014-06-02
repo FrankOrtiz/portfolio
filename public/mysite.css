@@ -1,3 +1,46 @@
-h1{
-	color:red;
+
+body{
+	background-color:#666;
+}
+
+ul.projects-list{
+	margin:auto;
+	width:inherit;
+}
+
+a{
+	color:inherit;
+
+}
+
+.project-item a:hover{
+	text-decoration: none;
+	color:inherit;
+}
+
+li.project-item{
+
+	margin-left:3px;
+	
+	border-color:#000;
+	border-style:solid;
+
+	height:365px;
+	width:200px;
+	background-color:#EB3333;
+	color:#FFF;
+}
+
+.name{
+	font-size:18px;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+.rating{
+	font-weight: bold;
+}
+
+.artwork img{
 }
