@@ -1,10 +1,15 @@
 
 body{
-	background-color:#666;
+	background-color:#AFAFAF;
 }
-
+footer{
+	background-color:#AFAFAF;
+}
 header{
 color:#fff;
+border-style: solid;
+border-color: #5A0000;
+background-color: #5C2E00;
 }
 
 header h1{
@@ -35,9 +40,10 @@ li.project-item{
 
 	height:365px;
 	width:200px;
-	background-color:#EB3333;
+	background-color:#333333;
 	color:#FFF;
 }
+
 
 .name{
 	font-size:18px;
@@ -46,8 +52,9 @@ li.project-item{
 	text-transform: uppercase;
 }
 
-.rating{
+.language{
 	font-weight: bold;
+	color: red;
 }
 
 .artwork img{
