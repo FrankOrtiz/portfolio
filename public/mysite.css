@@ -3,6 +3,14 @@ body{
 	background-color:#666;
 }
 
+header{
+color:#fff;
+}
+
+header h1{
+
+}
+
 ul.projects-list{
 	margin:auto;
 	width:inherit;
@@ -13,7 +21,7 @@ a{
 
 }
 
-.project-item a:hover{
+a:hover{
 	text-decoration: none;
 	color:inherit;
 }
