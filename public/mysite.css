@@ -4,13 +4,39 @@ body, html{
 	background-color:#000;
 }
 
+.email { 
+	font-size: 10px;
+}
+
+.caption-border{
+	padding-left:3px;
+	width: 219px;
+	height: 15px;
+	border-style: solid;
+	border-width: 1px;
+	margin-bottom: 10px;
+}
+
+.caption {
+	color:#33CC33;
+	font-size: 12px;
+}
+
+.caption a{
+	color: white;
+}
+
+h1 {
+	margin-bottom: 1px;
+}
+
 header{
 margin-top: 10px;
 margin-bottom: 15px;
 color:#fff;
 border-style: solid;
 border-color: #33CC33;
-background-color: black;
+background-color: #000;
 font-family: 'Orbitron', sans-serif;
 }
 
@@ -25,26 +51,57 @@ ul.projects-list{
 
 a{
 	color:inherit;
-
+}
+.modal-body iframe{
+	width:100%;
 }
 
 a:hover{
 	text-decoration: none;
-	color:inherit;
+	color: inherit;
+}
+
+.file-description{
+	text-align: center;
+	color: white;
+	font-size: 13px;
 }
 
 li.project-item{
-
-	margin-right: 0px;
+	text-align: center;
+	margin-right: 10px;
 	border-color:#000;
 	border-style:solid;
-
-	height:320px;
-	width:190px;
-	background-color:#333333;
+	height:350px;
+	width:200px;
+	background-color:#000;
 	color:#FFF;
+	border-style: solid;
+	border-color: #33CC33;
 }
 
+.right-bar{
+	display: inline-block;
+	position: fixed;
+	right: 15px;
+	z-index: 5;
+	border-style:solid;
+	padding-left:5px;
+	padding-right:5px;
+	background-color: #000;
+	border-color: #33CC33;
+	color: #33CC33;
+}
+
+.right-bar a{
+	color: #33CC33;
+}
+
+.headerbox{
+	float:right;
+	border-style: none;
+
+}
 
 .name{
 	color:#33CC33;
@@ -57,8 +114,29 @@ li.project-item{
 .language{
 	font-weight: bold;
 	font-family: 'audio wide';
-	color: red;
+	color:#BA0000;
+}
+.ruby-file{
+background-color: #000000;
+color:#33CC33;
+}
+.artwork img{
 }
 
-.artwork img{
+
+/* Modal CSS */
+
+.modal-body, .modal-header, .modal-footer {
+	background-color: #000;
+	color: white;
+	font-family: 'Orbitron';
+	border-color: #33CC33;
+}
+
+.modal-content {
+	background-color: #33CC33;
+}
+
+.modalBody {
+	color: #33CC33;
 }

@@ -9,17 +9,42 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<!-- Custom CSS -->
 	<link href = "mysite.css" rel = "stylesheet">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Philosopher|Play|Special+Elite|Audiowide|Black+Ops+One|Orbitron|Aldrich' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class"row">
+			<!-- to: do -hold on the top right -->
+			<div class="right-bar">
+				<a href="#">
+					<span class="glyphicon glyphicon-arrow-up"></a>
+						| Placeholder
+<!-- 					 | <a>GitHub</a> 
+					 | <a>Twitter </a> -->
+			</div>
 			<!-- Website header -->
 		<header class="col-xs-12 col-md-3">		
 				<h1>Frank Ortiz</h1>
+				<div class="caption-border">
+				<p class="caption">Coder 
+					<a>|</a> Designer 
+					<a>|</a> Writer 
+					<a>|</a> Gamer 
+				</p>
+			</div>
 				<!-- Phone number div -->
 				<div>
+					<!-- inside header border -->
+					<div class="headerbox">
+						<strong>Languages:</strong>
+						<br> >> Ruby
+						<br> >> JavaScript
+						<br> >> HTML
+						<br> >> CSS
+					</div>
 					<a href="tel:786-326-8350">
 						<span class="glyphicon glyphicon-phone-alt">
 						</span> 
@@ -31,56 +56,72 @@
 					<a href="mailto:Ortiz_frank@hotmail.com">
 						<span class="glyphicon glyphicon-envelope">
 						</span>
-						 Ortiz_Frank@hotmail.com
+						 <id class="email">Ortiz_Frank @hotmail.com</id></a>
 					</a>
 				</div>
 				<div>Wyncode Student</div>
 				<div>
 					<a href="https://github.com/FrankOrtiz">
-						<span class="glyphicon icon-github">
-						</span>
-						GitHub
+					GitHub
 					</a>
 				</div>
+				<div>
+					Placeholder
+				</div>
+
+				<div class="portrait">
+					<a href=""></a>
+				</div>
+
 		</header>
 		<div class="col-xs-12 col-md-9">
-			<ul class="projects-list col-xs-12 col-md-9">
+			<ul class="projects-list">
 			<!-- unordered list of movies -->
-			<li class="project-item thumbnail col-xs-6 col-sm-4">
-				<a href="game.rb" target="_blank">
-				<ul>
+			<li class="project-item thumbnail col-xs-6 col-sm-4">	
+			<a data-filename="game.rb" class="loadCode" class="href" data-toggle="modal" data-target="#codeModal">		
+			<ul>
 				<!-- unordered list of movie properties -->
 					<li class="name">Small text-game</li>
-					<li class="language">Ruby</li>
+					<li class="language">Ruby: 
+						 <span class="file-description">basic single file user interaction project.
+						 </span>
+					</li>
 					<li class="artwork"><img src="game.png"></li>
 					<li></li>
 				</ul>
 				</a>
 			</li>
 			<li class="project-item thumbnail col-xs-6 col-sm-4">
-				<a href="Tip_Calculator.rb" target="_blank">
+				<a data-filename="tip_calculator.rb" class="loadCode" class="href" data-toggle="modal" data-target="#codeModal">		
 				<ul>
 					<li class="name">Tip Calculator</li>
-					<li class="language">Ruby</li>
+					<li class="language">Ruby: 
+					<id class="file-description">simple tip calculator using loops.</id>
+					</li>
 					<li class="artwork"><img src="tip.png"></li>
 				</ul>
 				</a>
 			</li>
 
 			<li class="project-item thumbnail col-xs-6 col-sm-4">
-				<a href="sinatra.rb">
+				<a data-filename="sinatra.rb" class="loadCode" class="href" data-toggle="modal" data-target="#codeModal">		
 				<ul>
 					<li class="name">Sinatra Game</li>
-					<li class="language">Ruby/Sinatra</li>
+					<li class="language">Ruby/Sinatra:
+					<id class="file-description">web based game using sinatra.
+					</id>
+				</li>
 					<li class="artwork"><img src="sinatra.png"></li>
 				</ul>
 				</a>
 			</li>
 			<li class="project-item thumbnail col-xs-6 col-sm-4">
-				<a href="weapons.rb">
+				<a data-filename="weapons.rb" class="loadCode" class="href" data-toggle="modal" data-target="#codeModal">		
 				<ul>
 					<li class="name">Object Practice</li>
-					<li class="language">Ruby</li>
+					<li class="language">Ruby: 
+					<ib class="file-description">working with object oriented programing.</ib>
+					</li>
 					<li class="artwork"><img src="armory.png"></li>
 				</ul>
 				</a>
@@ -88,9 +129,41 @@
 		</ul>
 		</div>
 	</div>
-	<div class="row">
-		
 	</div>
-	</div>
+
+		<!-- Code Modal -->
+		<div class="modal fade" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Ruby Code</h4>
+		      </div>
+		      <div class="modal-body">
+
+		      	<script>
+		      	$(document).ready( function(){
+		      
+		      		function loadFile(file){
+		      			$.get(file, function( data ){ 
+		      				$('#modalBody').text(data) 
+		      			});
+		      		};
+		      		$('.loadCode').on('click', function(){
+		      			loadFile($(this).attr('data-filename')
+		      				);
+		      		});
+		      	});
+
+		      	</script>
+		      	<div id="modalBody"></div>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 </body>
 </html>
